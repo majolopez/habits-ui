@@ -1,13 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
-function App() {
+const App = () => {
+
+  axios.get('https://my-habits-2022-api.herokuapp.com/')
+      .then(res => {
+        console.log(res.data)
+      })
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Welcome to habits app
+          Welcome to habits app 
         </p>
         <a
           className="App-link"
